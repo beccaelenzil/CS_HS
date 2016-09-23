@@ -49,10 +49,14 @@ def front3(word):
     return front + front + front
 print 'front3(java) is', front3('java')
 def pigletlatin(word):
-    if word[0] == 'a' or 'e' or 'i' or 'o' or'u':
+    first = word[0]
+    if len('word') == 0:
+        return word
+    elif first == 'a' or first =='e' or first == 'i' or first == 'o' or first == 'u':
         return word + 'way'
     else:
-        return word[-1] + word[1:-1] + 'ay'
+        return word[-1] + word[0:-1] + 'ay'
 print 'pigletlatin(be) is', pigletlatin('be')
-
+print 'pigletlatin(one) is', pigletlatin('one')
+print 'pigletlatin() is', pigletlatin('')
 
