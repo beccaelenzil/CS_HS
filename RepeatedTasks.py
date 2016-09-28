@@ -51,3 +51,49 @@ print "dot( [1,2,3,4], [10,100,1000,10000] )  43210.0 ==", dot( [1,2,3,4], [10,1
 print "dot( [5,3], [6] )        0.0 ==", dot( [5,3], [6] )
 print "dot( [], [6] )           0.0 ==", dot( [], [6] )
 print "dot( [], [] )            0.0 ==", dot( [], [] )
+
+def count_evens(L):
+    n = 0
+    for x in L:
+        if x%2 == 0:
+            n = n + 1
+    return n
+print "count_evens([2, 1, 2, 3, 4], 3 == ", count_evens([2, 1, 2, 3, 4])
+print "count_evens([2, 2, 0]), 3 == ", count_evens([2, 2, 0])
+print "count_evens([1, 3, 5]), 0 == ", count_evens([1, 3, 5])
+
+def count9(L):
+    n = 0
+    for x in L:
+        if x == 9:
+            n = n + 1
+    return n
+print "count9([1, 2, 9]), 1 == ",count9([1, 2, 9])
+print "count9([1, 9, 9]), 2 == ",count9([1, 9, 9])
+print "count9([1, 9, 9, 3, 9]), 3 == ",count9([1, 9, 9, 3, 9])
+
+
+
+
+
+
+def uniq( L ):
+    """ returns whether all elements in L are unique
+          input: L, a list of any elements
+          output: True, if all elements in L are unique,
+               or False, if there is any repeated element
+    """
+    if len(L) == 0:
+        return True
+    elif L[0] in L[1:]:
+        return False
+    else:
+        return uniq( L[1:] ) # recursion is OK, too!
+def untilarepeat(high):
+    import random
+    n = 0
+    L = []
+    while uniq(L) == False:
+        L = L + random.choice(range(0,high))
+        n = n + 1
+    return n
