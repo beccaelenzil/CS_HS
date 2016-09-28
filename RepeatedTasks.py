@@ -72,8 +72,29 @@ print "count9([1, 2, 9]), 1 == ",count9([1, 2, 9])
 print "count9([1, 9, 9]), 2 == ",count9([1, 9, 9])
 print "count9([1, 9, 9, 3, 9]), 3 == ",count9([1, 9, 9, 3, 9])
 
+def printrect(width,height,symbol):
+    L =''
+    for x in range(0,width):
+        L = L + symbol
+    for h in range(0,height):
+        print L
+printrect(4,6,'%')
 
-
+def printtriangle(width, symbol,rightsideup):
+    L = ''
+    if rightsideup == True:
+        for x in range(1,width+1):
+            print symbol*x
+    if rightsideup == False:
+        for x in range(width,0,-1):
+            print symbol*x
+printtriangle(3,'@',True)
+printtriangle(3,'$',False)
+def printbumps(num,symbol1,symbol2):
+    for x in range(0,num+1):
+        printtriangle(x,symbol1,True)
+        printtriangle(x,symbol2,False)
+printbumps(3,'&','!')
 
 
 
