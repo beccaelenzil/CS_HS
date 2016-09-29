@@ -37,7 +37,7 @@ checkends(' ') == True:  True True
 -------------------------------------
 Problem 2 - Part 2 --- Score: 3/3
 Notes:
- 
+
 flipside('homework') == 'workhome':  workhome True
 flipside('carpets') ==  'petscar':  petscar True
 
