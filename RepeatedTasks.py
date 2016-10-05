@@ -95,26 +95,3 @@ def printbumps(num,symbol1,symbol2):
         printtriangle(x,symbol1,True)
         printtriangle(x,symbol2,False)
 printbumps(3,'&','!')
-
-
-
-def uniq( L ):
-    """ returns whether all elements in L are unique
-          input: L, a list of any elements
-          output: True, if all elements in L are unique,
-               or False, if there is any repeated element
-    """
-    if len(L) == 0:
-        return True
-    elif L[0] in L[1:]:
-        return False
-    else:
-        return uniq( L[1:] ) # recursion is OK, too!
-def untilarepeat(high):
-    import random
-    n = 0
-    L = []
-    while uniq(L) == False:
-        L = L + random.choice(range(0,high))
-        n = n + 1
-    return n
