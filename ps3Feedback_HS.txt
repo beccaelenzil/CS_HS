@@ -1,0 +1,11 @@
+
+-------------------------------------
+Problem 2) Multiplication Practice Game --- Score: 3/3
+
+Has character, nice! Nice work using functions to pass information.
+
+You could make it a little more user friendly by explaining to the player
+the meaning of the levels
+
+-------------------------------------
+Problem 3) Guess My Number --- Score:
