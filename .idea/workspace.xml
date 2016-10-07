@@ -20,12 +20,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lists and Strings" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lists and Strings">
+      <file leaf-file-name="Guessthenumber.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Guessthenumber.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+            <state relative-caret-position="60">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="21.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/21.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepeatedTasks.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RepeatedTasks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
+              <folding>
+                <element signature="e#20#130#0" expanded="false" />
+                <element signature="e#400#497#0" expanded="false" />
+                <element signature="e#666#881#0" expanded="false" />
+                <element signature="e#1171#1333#0" expanded="false" />
+                <element signature="e#1687#1764#0" expanded="false" />
+                <element signature="e#1982#2057#0" expanded="false" />
+                <element signature="e#2721#2822#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,6 +78,7 @@
         <option value="$PROJECT_DIR$/MultiplicationPracticeGame.py" />
         <option value="$PROJECT_DIR$/Guessthenumber.py" />
         <option value="$PROJECT_DIR$/RepeatedTasks.py" />
+        <option value="$PROJECT_DIR$/21.py" />
       </list>
     </option>
   </component>
@@ -112,7 +141,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.Guessthenumber">
+  <component name="RunManager" selected="Python.21">
     <configuration default="false" name="Lists and Strings" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,6 +206,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="IntroCS_HS" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Guessthenumber.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="21" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IntroCS_HS" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/21.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -345,19 +391,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Function Fun" />
       <item index="1" class="java.lang.String" itemvalue="Python.Lists and Strings" />
       <item index="2" class="java.lang.String" itemvalue="Python.RepeatedTasks" />
       <item index="3" class="java.lang.String" itemvalue="Python.MultiplicationPracticeGame" />
       <item index="4" class="java.lang.String" itemvalue="Python.Guessthenumber" />
+      <item index="5" class="java.lang.String" itemvalue="Python.21" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.Guessthenumber" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MultiplicationPracticeGame" />
-        <item index="2" class="java.lang.String" itemvalue="Python.RepeatedTasks" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Lists and Strings" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.21" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Guessthenumber" />
+        <item index="2" class="java.lang.String" itemvalue="Python.MultiplicationPracticeGame" />
+        <item index="3" class="java.lang.String" itemvalue="Python.RepeatedTasks" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Lists and Strings" />
       </list>
     </recent_temporary>
   </component>
@@ -386,6 +434,22 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3018018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24324325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -400,7 +464,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -486,30 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Guessthenumber.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RepeatedTasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
-          <folding>
-            <element signature="e#20#130#0" expanded="false" />
-            <element signature="e#400#497#0" expanded="false" />
-            <element signature="e#666#881#0" expanded="false" />
-            <element signature="e#1171#1333#0" expanded="false" />
-            <element signature="e#1687#1764#0" expanded="false" />
-            <element signature="e#1982#2057#0" expanded="false" />
-            <element signature="e#2721#2822#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MultiplicationPracticeGame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -523,6 +563,38 @@
         <state relative-caret-position="297">
           <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Guessthenumber.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/21.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepeatedTasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
+          <folding>
+            <element signature="e#20#130#0" expanded="false" />
+            <element signature="e#400#497#0" expanded="false" />
+            <element signature="e#666#881#0" expanded="false" />
+            <element signature="e#1171#1333#0" expanded="false" />
+            <element signature="e#1687#1764#0" expanded="false" />
+            <element signature="e#1982#2057#0" expanded="false" />
+            <element signature="e#2721#2822#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
