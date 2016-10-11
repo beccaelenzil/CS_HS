@@ -1,4 +1,4 @@
-Total Score:
+Total Score: 9/9
 Notes:
 -------------------------------------
 Problem 1) For Loops --- Score: 3/3
@@ -45,4 +45,8 @@ You could make it a little more user friendly by explaining to the player
 the meaning of the levels
 
 -------------------------------------
-Problem 3) Guess My Number --- Score:
+Problem 3) Guess My Number --- Score: 3/3
+
+You should include instructions.
+
+Nice work including a list of all guesses and a counter.
