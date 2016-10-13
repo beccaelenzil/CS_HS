@@ -1,7 +1,13 @@
 import random
 import time
 counter = 21
+def instructions():
+    ####### tells instructions
+    print 'Take turns with me counting down from 21'
+    print 'You can subtract by 1,2, or 3 each turn'
+    print 'Whoever makes the counter 0 wins'
 def play():
+    ####### Directs player to their turn or computer's turn depending on their choice
     valid = 0
     while valid == 0:
         try:
@@ -16,10 +22,23 @@ def play():
                 print 'Please choose yes or no'
         except:
             print 'Please choose yes or no'
+    playagain()
+def playagain():
+    ######## repeats game if player wants. resets counter
+    global counter
+    counter = 21
+    again = raw_input('Wanna play again?')
+    if again == 'yes':
+        play()
+    elif again == 'no':
+        print 'aight'
+    else:
+        print 'Please enter yes or no.'
+        playagain()
 
 def yourturn():
+    ######### asks user for choice, subtratcts from counter, passes turn to computer
     global counter
-    global turn
     userchoice = 0
     print 'Counter is:', counter
     time.sleep(1)
@@ -37,6 +56,7 @@ def yourturn():
     else:
         myturn()
 def myturn():
+    ####### selects choice for computer, subtracts from counter, passes turn to player. If can, makes choice counter mod 4.
     global counter
     print 'Counter is:', counter
     if counter%4 == 0:
@@ -53,4 +73,8 @@ def myturn():
         print 'I win'
     else:
         yourturn()
-play()
+def main():
+    #### organizes functions into game
+    instructions()
+    play()
+main()
