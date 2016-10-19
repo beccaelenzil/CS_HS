@@ -8,8 +8,16 @@ def rwPos(start,nsteps):
         currentPosition = currentPosition + rs()
         print 'current position is' + str(currentPosition)
     return currentPosition
+
 def rwsteps(start,lo,hi):
+    counter = 0
     currentPosition = start
-    counter
-    if currentPosition >= hi or currentPosition <= lo:
-        return counter
+    while currentPosition < hi and currentPosition > lo:
+        counter += 1
+        startspace = ' '*(currentPosition-lo-1)
+        endspace = ' '*(hi-currentPosition-1)
+        print '|'+startspace+'S'+endspace+'|',currentPosition
+        currentPosition += rs()
+    print 'It took', counter,'times'
+
+rwsteps(5,0,10)
