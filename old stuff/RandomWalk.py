@@ -3,6 +3,8 @@ import time
 def rs():
     return random.choice([-1,1])
 def rwPos(start,nsteps):
+    '''returns position of a particle starting at start, and taking
+    nsteps random steps in either direction. prints position after each step'''
     currentPosition = start
     for i in range(0,nsteps):
         currentPosition = currentPosition + rs()
@@ -10,6 +12,9 @@ def rwPos(start,nsteps):
     return currentPosition
 
 def rwsteps(start,lo,hi):
+    '''places particle and start, and has it take random steps
+    until it gets above hi or below lo. Shows visual of it moving
+    back and forth, and prints number of steps it took finish once finished'''
     counter = 0
     currentPosition = start
     while currentPosition < hi and currentPosition > lo:
@@ -24,17 +29,23 @@ def rwsteps(start,lo,hi):
 #rwsteps(75,0,150)
 
 def rwPosPlain(start,nsteps):
+    '''returns position of a particle starting at start, and taking
+    nsteps random steps in either direction'''
     currentPosition = start
     for i in range(0,nsteps):
         currentPosition = currentPosition + rs()
     return currentPosition
 
 def ave_signed_displacement(numtrials):
+    '''return average displacement of particle taking 100
+    steps in numtrials trials'''
     counter = 0
     for i in range(numtrials):
         counter += rwPosPlain(0,100)
     return counter/numtrials
 def ave_squared_displacement(numtrials):
+    '''return average squared displacement of particle taking 100
+    steps in numtrials trials'''
     counter = 0
     for i in range(numtrials):
         counter += rwPosPlain(0,100)**2
