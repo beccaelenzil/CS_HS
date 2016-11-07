@@ -81,3 +81,4 @@ print avesignedave(30)
     signed: 10.85
     squared: 191.028
 """
+rwsteps(5,0,10)

@@ -1,1 +1,21 @@
 Total Score:
+
+Total Score: 3/6
+Notes:
+-------------------------------------
+Problem 1) Recursive Drawing: 0/3
+Notes: you provided a link to your game, not your recursive drawing
+
+-------------------------------------
+Problem 2) Recursive Functions: 3/3
+Notes: Indexing error for fibIter() ok
+
+# Fibonnaci Tests
+fib(5) == 5 =  5  :  True
+fib(11) == 89 =  89  :  True
+fibIter(5) == 5 =  3  :  False
+fibIter(11) == 89 =  55  :  False
+
+# List Reverse Tests
+listReverse([1,2,3,4]) == [4,3,2,1] =  [4, 3, 2, 1]  :  True
+listReverseIter([1,2,3,4]) == [4,3,2,1] =  [4, 3, 2, 1]  :  True
