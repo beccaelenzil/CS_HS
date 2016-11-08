@@ -52,50 +52,82 @@ def countNeighboroughs(row,col,A):
     list[-1] = A[row][col]
     for r in range(row-1,row+2):
         for c in range(col-1,col+2):
-            if row == 0 or row == h-1 or col == 0 or col == w-1:
+            if r == row and c == col or A[r][c] == -1:
                 pass
+            elif A[r][c] == 1:
+                list[0] += 1
+            elif A[r][c] == 2:
+                list[1] += 1
             else:
-                if r == row and c == col:
-                    pass
-                elif A[r][c] == 1:
-                    list[0] += 1
-                elif A[r][c] == 2:
-                    list[1] += 1
-                else:
-                    pass
+                pass
     return list
-
-def next_life_generation(A,thresh):
+def listempties(A):
     empties = []
+    h = len(A)
+    w = len(A[0])
+    for row in range(h):
+        for col in range(w):
+            if A[row][col] == 0:
+                empties.append([row,col])
+    return empties
+def countNeighboroughsArray(A):
     neigh = []
     h = len(A)
     w = len(A[0])
     for row in range(h):
         neigh.append([])
         for col in range(w):
-            if row == 0 or row == h-1 or col == 0 or col == w-1:
-                neigh[row].append(0)
+            if A[row][col] == -1:
+                neigh[row].append(-1)
             else:
                 neigh[row].append(countNeighboroughs(row,col,A))
-                if A[row][col] == 0:
-                    empties.append([row,col])
+    return neigh
+def vacateList(A,thresh):
+    neigh = countNeighboroughsArray(A)
+    vacaters = []
+    h = len(A)
+    w = len(A[0])
+    for row in range(h):
+        for col in range(w):
+            if A[row][col] == -1:
+                pass
+            else:
+                totalnumneighboroughs = neigh[row][col][0] + neigh[row][col][1]
+                mynumneighboroughs = neigh[row][col][neigh[row][col][2]-1]
+                if totalnumneighboroughs > 0:
+                    if float(mynumneighboroughs)/totalnumneighboroughs < thresh and A[row][col] > 0:
+                        vacaters.append([row,col])
+    return vacaters
+def next_life_generation(A,thresh):
+    empties = listempties(A)
+    vacaters = vacateList(A,thresh)
+    emptiescopy = empties
+    vacaterscopy = vacaters
+    h = len(A)
+    w = len(A[0])
+    changes = [[],[]]
+    for i in range(len(vacaterscopy)):
+        if len(emptiescopy) > 0:
+            start = random.randint(0,len(vacaterscopy)-1)
+            finish = random.randint(0,len(emptiescopy)-1)
+            changes[0].append(vacaterscopy[start])
+            changes[1].append(emptiescopy[finish])
+            vacaterscopy.remove(vacaterscopy[start])
+            emptiescopy.remove(emptiescopy[finish])
     newA = []
     for row in range(h):
         newA.append([])
         for col in range(w):
-            if row == 0 or row == h-1 or col == 0 or col == w-1:
+            if [row,col] in changes[0]:
                 newA[row].append(0)
+            elif [row,col] in changes[1]:
+                oldvaluecoord = changes[0][changes[1].index([row,col])]
+                oldvalue = A[oldvaluecoord[0]][oldvaluecoord[1]]
+                newA[row].append(oldvalue)
             else:
-                a = neigh[row][col][neigh[row][col][-1]-1]
-                tot = neigh[row][col][0] + neigh[row][col][1]
-                if a/tot < thresh :
-                    newA[row].append(0)
-                elif neigh[row][col] == 3:
-                    newA[row].append(1)
-                else:
-                    newA[row].append(A[row][col])
-
-A = randomCells(2,5,.2,.4)
-B = countNeighboroughs(3,4,A)
+                newA[row].append(A[row][col])
+    return newA
+A = randomCells(5,10,.2,.4)
+B = next_life_generation(A,.45)
 printBoard(A)
-print B
+printBoard(B)
