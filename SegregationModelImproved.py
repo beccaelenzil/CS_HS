@@ -21,7 +21,37 @@ def createBoard(width, height):
     for row in range(height):
         A.append(createOneRow(width))
     return A
+def copy(A):
+    copy = []
+    h = len(A)
+    w = len(A[0])
+    for row in range(h):
+        copy.append([])
+        for col in range(w):
+            copy[row].append(A[row][col])
+    return copy
+def segregationIndex(height,width,A):
+    """
+    takes in a matrix and returns a segregation index
+    """
+    segregation = copy(A)
+    segregationList = []
+    neigh = countNeighboroughsArray(A)
+    for row in range(height):
+        for col in range(width):
+            if A > 0:
+                sameNeighboroughs = neigh[row][col][neigh[row][col][2]-1]
+                totalNeighbouroughs = neigh[row][col][0] + neigh[row][col][1]
+                segregation[row][col] = float(sameNeighboroughs)/float(totalNeighbouroughs)
+                # I could make a heat map of segregation
 
+                # put it into a list so we can easily take the average
+                segregationList.append(segregation[row][col])
+
+    # take the average of the segregationIndex for each cell to get a single metric
+    segregationIndex = sum(segregationList)/len(segregationList)
+
+    return [segregation, segregationIndex]
 def randomCells(w,h,type1,type2):
     '''
     creates an empty board and modifies it so all boarders are off, and all inners are randomly either on or off
@@ -94,8 +124,8 @@ def vacateList(A,thresh):
             else:
                 totalnumneighboroughs = neigh[row][col][0] + neigh[row][col][1]
                 mynumneighboroughs = neigh[row][col][neigh[row][col][2]-1]
-                if totalnumneighboroughs > 0:
-                    if float(mynumneighboroughs)/totalnumneighboroughs < thresh and A[row][col] > 0:
+                if totalnumneighboroughs > 0 and A[row][col] > 0:
+                    if float(mynumneighboroughs)/totalnumneighboroughs < thresh:
                         vacaters.append([row,col])
     return vacaters
 def next_life_generation(A,thresh):

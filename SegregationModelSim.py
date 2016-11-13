@@ -1,14 +1,14 @@
 import random
 import time
 import pygame
-from SegregationModel import *
+from SegregationModelImproved import *
 
-width = 50
-height = 50
+width = 80
+height = 80
 cell_size = 5
 spacing = 1
-Type1prob = .45
-Type2prob = .45
+Type1prob = .40
+Type2prob = .35
 Threshhold = .7
 # Define some colors
 BLACK = (0, 0, 0)
@@ -25,7 +25,7 @@ pygame.init()
 size = (screen_width, screen_height)
 screen = pygame.display.set_mode(size)
 
-pygame.display.set_caption("Game Of Life")
+pygame.display.set_caption("Segregation Model")
 
 # Loop until the user clicks the close button.
 done = False

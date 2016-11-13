@@ -50,11 +50,6 @@ def electionSim():
     print "percent dem:", 1 - sum(winner)/float(num_sims)
     print "percent rep:", sum(winner)/float(num_sims)
     return votes
-electionSim()
 
-
-
-
-
-
-
+votes = electionSim()
+print votes[0]
