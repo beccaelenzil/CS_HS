@@ -11,7 +11,6 @@ def createOneRow(width):
     return row
 
 def printBoard(A):
-    ''' prints board in grid form'''
     for row in A:
         line = ''
         for col in row:
@@ -54,8 +53,6 @@ def randomCells(w,h,type1,type2,typestore):
     return A
 
 def countNeighboroughs(row,col,A):
-    '''returns [number of type 1 of the surrounding 8,number of type 2, type of tile referenced
-    by coordinates (row,col) in grid A'''
     list = [0,0,0]
     list[-1] = A[row][col]
     for r in range(row-1,row+2):
@@ -70,7 +67,6 @@ def countNeighboroughs(row,col,A):
                 pass
     return list
 def listempties(A):
-    '''creates a list of coordinates of empty cells in A'''
     empties = []
     h = len(A)
     w = len(A[0])
@@ -80,7 +76,6 @@ def listempties(A):
                 empties.append([row,col])
     return empties
 def countNeighboroughsArray(A):
-    '''creates an array where the countneighboroughs list is in the place of the value of each cell'''
     neigh = []
     h = len(A)
     w = len(A[0])
@@ -93,10 +88,6 @@ def countNeighboroughsArray(A):
                 neigh[row].append(countNeighboroughs(row,col,A))
     return neigh
 def vacateList(A,thresh,storeradius,storethresh):
-    '''creates a list of the cells that need to leave based on the rules:
-    If the proportion of neighboroughs that are similar is less than Thresh,
-    Or the cell is type 3, and proportion of cells within storeradius cells is below storethresh,
-    or the cell is occupied non-type 3, and there isn't a type 3 cell within storeradius cells'''
     neigh = countNeighboroughsArray(A)
     vacaters = []
     h = len(A)
@@ -118,7 +109,6 @@ def vacateList(A,thresh,storeradius,storethresh):
                         vacaters.append([row,col])
     return vacaters
 def bigcountneighboroughs(r,row,col,A):
-    '''returns [number of stores within r cells, number of occupied cells within r cells'''
     neigh = [0,0]
     h = len(A)
     w = len(A[0])
@@ -142,7 +132,6 @@ def bigcountneighboroughs(r,row,col,A):
                     neigh[0] += 1
     return neigh
 def copy(A):
-    '''makes a copy of A'''
     copy = []
     h = len(A)
     w = len(A[0])
@@ -152,8 +141,6 @@ def copy(A):
             copy[row].append(A[row][col])
     return copy
 def segregationIndex(A):
-    '''returns th average proportion of neighboroughs that are friendly, across the
-    entire board'''
     neigh = countNeighboroughsArray(A)
     height = len(A)
     width = len(A[0])
@@ -172,8 +159,6 @@ def segregationIndex(A):
     segregationTotal = sum(segregationList)/len(segregationList)
     return segregationTotal
 def next_life_generation(A,thresh,storeradius,storethresh):
-    '''cretes the next generation grid, moving random cells from the vacater list and placing
-    them in empty coordinates. does not place if either vacater or empties list is empty'''
     empties = listempties(A)
     vacaters = vacateList(A,thresh,storeradius,storethresh)
     emptiescopy = empties
@@ -203,7 +188,6 @@ def next_life_generation(A,thresh,storeradius,storethresh):
                 newA[row].append(A[row][col])
     return newA
 def nextlifegenStat(A,thresh,storeradius,storethresh):
-    '''does the same as nextlifegeneration, but returns as list [A,0] if the simulation is static'''
     empties = listempties(A)
     vacaters = vacateList(A,thresh,storeradius,storethresh)
     if len(vacaters) == 0:
@@ -235,46 +219,3 @@ def nextlifegenStat(A,thresh,storeradius,storethresh):
                 else:
                     newA[row].append(A[row][col])
         return newA
-def main(radius):
-    '''returns the segregation index after 110 generations for 90 different scenarios, taking the average
-    of gens 101-110, or the final value if the simulation goes static earlier, in a grid form.
-    rows are threshhold values - multiples of 5 from 0 to 75. columns are store proportion threshholds
-    - multiples of 4 from 0 to 24'''
-    data = []
-    for thresh in range(15):
-        data.append([])
-        for storeprop in range(6):
-            print ['a',thresh,storeprop]
-            A = randomCells(50,50,.35,.35,float(4*storeprop/100))
-            c = 0
-            d = 0
-            e = 0
-            ave = []
-            while len(A) > 2:
-                A = nextlifegenStat(A,float(5*thresh/100),4,(2*radius)*(2*radius-1.5))
-                c += 1
-                print c
-                if c > 100:
-                    d += 1
-                    ave.append(segregationIndex(A))
-                    if d == 10:
-                        data[thresh].append(sum(ave)/len(ave))
-                        e = 1
-                        break
-            if e == 0:
-                ave.append(segregationIndex(A))
-    return data
-def toexcel():
-    '''places grids formed in main function into excel spreadsheets. makes 5 sheets,
-    one for each value of store radius 1-5'''
-    wb = openpyxl.load_workbook('grid.xlsx')
-    for i in range(5):
-        print i,'sheet'
-        data = main(i+1)
-        sheet = wb.get_sheet_by_name('Sheet'+str(i+1))
-        for row in range(len(data)):
-            for col in range(len(data[0])):
-                print [row,col]
-                sheet.cell(column=col+1,row=row+1).value=data[row][col]
-    wb.save('grid.xlsx')
-toexcel()

@@ -131,9 +131,9 @@ def next_life_generation(A):
                 newA[row].append(A[row][col])
     return newA
 A = [ [0,0,0,0,0],
-      [0,1,0,0,0],
-      [0,1,0,0,0],
-      [0,1,0,0,0],
+      [0,0,1,0,0],
+      [0,0,1,0,0],
+      [0,0,1,0,0],
       [0,0,0,0,0]]
 printBoard(A)
 A2 = next_life_generation(A)
