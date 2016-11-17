@@ -9,7 +9,7 @@ cell_size = 5
 spacing = 1
 Type1prob = .35
 Type2prob = .35
-Threshhold = .4
+Threshhold = .7
 
 # Define some colors
 BLACK = (0,0,0)
@@ -61,7 +61,6 @@ while not done:
             done = True
 
     A = next_life_generation(A,Threshhold)
-
     drawBoard(A)
     # --- Go ahead and update the screen with what we've drawn.
     pygame.display.flip()

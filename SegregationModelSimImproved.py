@@ -9,9 +9,9 @@ cell_size = 5
 spacing = 1
 Type1prob = .35
 Type2prob = .35
-TypeStoreprob = .12
-Threshhold = .50
-Storeradius = 2
+TypeStoreprob = .16
+Threshhold = .5
+Storeradius = 5
 Storethresh = (2*Storeradius)*(2*Storeradius-1.5)
 
 # Define some colors
@@ -19,7 +19,7 @@ BLACK = (0,0,0)
 WHITE = (255, 255, 255)
 RED = (255,0,0)
 BLUE = (0,0,255)
-YELLOW = (255,255,0)
+GREEN = (0,255,0)
 screen_width = height*(cell_size+spacing)
 screen_height = width*(cell_size+spacing)
 
@@ -48,7 +48,7 @@ def drawBoard(A):
             elif A[row][col] == 2:
                 pygame.draw.rect(screen, BLUE,[x_pos,y_pos,cell_size,cell_size])
             elif A[row][col] == 3:
-                pygame.draw.rect(screen, YELLOW,[x_pos,y_pos,cell_size,cell_size])
+                pygame.draw.rect(screen, GREEN,[x_pos,y_pos,cell_size,cell_size])
             elif A[row][col] == 0:
                 pygame.draw.rect(screen, WHITE,[x_pos,y_pos,cell_size,cell_size])
             elif A[row][col] == -1:

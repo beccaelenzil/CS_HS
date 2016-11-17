@@ -245,14 +245,12 @@ def main(radius):
         data.append([])
         for storeprop in range(6):
             print ['a',thresh,storeprop]
-            A = randomCells(50,50,.35,.35,float(4*storeprop/100))
+            A = randomCells(50,50,.35,.35,float(4)*storeprop/100)
             c = 0
             d = 0
             e = 0
             ave = []
             while len(A) > 2:
-                A = nextlifegenStat(A,float(5*thresh/100),4,(2*radius)*(2*radius-1.5))
-                c += 1
                 print c
                 if c > 100:
                     d += 1
@@ -261,8 +259,10 @@ def main(radius):
                         data[thresh].append(sum(ave)/len(ave))
                         e = 1
                         break
+                A = nextlifegenStat(A,float(5)*thresh/100,4,(2*radius)*(2*radius-1.5))
+                c += 1
             if e == 0:
-                ave.append(segregationIndex(A))
+                data[thresh].append(segregationIndex(A[0]))
     return data
 def toexcel():
     '''places grids formed in main function into excel spreadsheets. makes 5 sheets,
@@ -270,6 +270,7 @@ def toexcel():
     wb = openpyxl.load_workbook('grid.xlsx')
     for i in range(5):
         print i,'sheet'
+        wb.save('grid.xlsx')
         data = main(i+1)
         sheet = wb.get_sheet_by_name('Sheet'+str(i+1))
         for row in range(len(data)):

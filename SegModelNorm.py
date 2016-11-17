@@ -1,5 +1,5 @@
 import random
-
+import openpyxl
 def createOneRow(width):
     """ returns one row of zeros of width "width"...
          You should use this in your
@@ -82,16 +82,6 @@ def countNeighboroughsArray(A):
             else:
                 neigh[row].append(countNeighboroughs(row,col,A))
     return neigh
-def copy(A):
-    '''makes a copy of A'''
-    copy = []
-    h = len(A)
-    w = len(A[0])
-    for row in range(h):
-        copy.append([])
-        for col in range(w):
-            copy[row].append(A[row][col])
-    return copy
 def vacateList(A,thresh):
     neigh = countNeighboroughsArray(A)
     vacaters = []
@@ -111,97 +101,45 @@ def vacateList(A,thresh):
 def next_life_generation(A,thresh):
     empties = listempties(A)
     vacaters = vacateList(A,thresh)
-    emptiescopy = empties
-    vacaterscopy = vacaters
+    if len(vacaters) == 0:
+        return [A,0]
+    else:
+        emptiescopy = empties
+        vacaterscopy = vacaters
+        h = len(A)
+        w = len(A[0])
+        changes = [[],[]]
+        for i in range(len(vacaterscopy)):
+            if len(emptiescopy) > 0:
+                start = random.randint(0,len(vacaterscopy)-1)
+                finish = random.randint(0,len(emptiescopy)-1)
+                changes[0].append(vacaterscopy[start])
+                changes[1].append(emptiescopy[finish])
+                vacaterscopy.remove(vacaterscopy[start])
+                emptiescopy.remove(emptiescopy[finish])
+        newA = []
+        for row in range(h):
+            newA.append([])
+            for col in range(w):
+                if [row,col] in changes[0]:
+                    newA[row].append(0)
+                elif [row,col] in changes[1]:
+                    oldvaluecoord = changes[0][changes[1].index([row,col])]
+                    oldvalue = A[oldvaluecoord[0]][oldvaluecoord[1]]
+                    newA[row].append(oldvalue)
+                else:
+                    newA[row].append(A[row][col])
+        return newA
+def copy(A):
+    '''makes a copy of A'''
+    copy = []
     h = len(A)
     w = len(A[0])
-    changes = [[],[]]
-    for i in range(len(vacaterscopy)):
-        if len(emptiescopy) > 0:
-            start = random.randint(0,len(vacaterscopy)-1)
-            finish = random.randint(0,len(emptiescopy)-1)
-            changes[0].append(vacaterscopy[start])
-            changes[1].append(emptiescopy[finish])
-            vacaterscopy.remove(vacaterscopy[start])
-            emptiescopy.remove(emptiescopy[finish])
-    newA = []
     for row in range(h):
-        newA.append([])
+        copy.append([])
         for col in range(w):
-            if [row,col] in changes[0]:
-                newA[row].append(0)
-            elif [row,col] in changes[1]:
-                oldvaluecoord = changes[0][changes[1].index([row,col])]
-                oldvalue = A[oldvaluecoord[0]][oldvaluecoord[1]]
-                newA[row].append(oldvalue)
-            else:
-                newA[row].append(A[row][col])
-    return newA
-def nextlifegenStat(A,thresh,storeradius,storethresh):
-    '''does the same as nextlifegeneration, but returns as list [A,0] if the simulation is static'''
-    empties = listempties(A)
-    vacaters = vacateList(A,thresh,storeradius,storethresh)
-    if len(vacaters) == 0:
-        return [A,0]
-    else:
-        emptiescopy = empties
-        vacaterscopy = vacaters
-        h = len(A)
-        w = len(A[0])
-        changes = [[],[]]
-        for i in range(len(vacaterscopy)):
-            if len(emptiescopy) > 0:
-                start = random.randint(0,len(vacaterscopy)-1)
-                finish = random.randint(0,len(emptiescopy)-1)
-                changes[0].append(vacaterscopy[start])
-                changes[1].append(emptiescopy[finish])
-                vacaterscopy.remove(vacaterscopy[start])
-                emptiescopy.remove(emptiescopy[finish])
-        newA = []
-        for row in range(h):
-            newA.append([])
-            for col in range(w):
-                if [row,col] in changes[0]:
-                    newA[row].append(0)
-                elif [row,col] in changes[1]:
-                    oldvaluecoord = changes[0][changes[1].index([row,col])]
-                    oldvalue = A[oldvaluecoord[0]][oldvaluecoord[1]]
-                    newA[row].append(oldvalue)
-                else:
-                    newA[row].append(A[row][col])
-        return newA
-def next_life_generationA(A,thresh):
-    empties = listempties(A)
-    vacaters = vacateList(A,thresh)
-    if len(vacaters) == 0:
-        return [A,0]
-    else:
-        emptiescopy = empties
-        vacaterscopy = vacaters
-        h = len(A)
-        w = len(A[0])
-        changes = [[],[]]
-        for i in range(len(vacaterscopy)):
-            if len(emptiescopy) > 0:
-                start = random.randint(0,len(vacaterscopy)-1)
-                finish = random.randint(0,len(emptiescopy)-1)
-                changes[0].append(vacaterscopy[start])
-                changes[1].append(emptiescopy[finish])
-                vacaterscopy.remove(vacaterscopy[start])
-                emptiescopy.remove(emptiescopy[finish])
-        newA = []
-        for row in range(h):
-            newA.append([])
-            for col in range(w):
-                if [row,col] in changes[0]:
-                    newA[row].append(0)
-                elif [row,col] in changes[1]:
-                    oldvaluecoord = changes[0][changes[1].index([row,col])]
-                    oldvalue = A[oldvaluecoord[0]][oldvaluecoord[1]]
-                    newA[row].append(oldvalue)
-                else:
-                    newA[row].append(A[row][col])
-        return newA
+            copy[row].append(A[row][col])
+    return copy
 def segregationIndex(A):
     '''returns th average proportion of neighboroughs that are friendly, across the
     entire board'''
@@ -222,3 +160,37 @@ def segregationIndex(A):
     # take the average of the segregationIndex for each cell to get a single metric
     segregationTotal = sum(segregationList)/len(segregationList)
     return segregationTotal
+def main():
+    '''returns the segregation index after 110 generations for 90 different scenarios, taking the average
+    of gens 101-110, or the final value if the simulation goes static earlier, in a grid form.
+    rows are threshhold values - multiples of 5 from 0 to 75. columns are store proportion threshholds
+    - multiples of 4 from 0 to 24'''
+    data = []
+    for thresh in range(15):
+        A = randomCells(50,50,.35,.35)
+        c = 0
+        d = 0
+        e = 0
+        list = []
+        while len(A) != 2:
+            if c > 100:
+                d += 1
+                list.append(segregationIndex(A))
+                if d == 10:
+                    e = 1
+                    data.append(sum(list)/len(list))
+                    break
+            A = next_life_generation(A,float(5)*thresh/100)
+            c += 1
+        if e == 0:
+            data.append(segregationIndex(A[0]))
+    return data
+def toexcel():
+    '''places list made in main function into excel'''
+    wb = openpyxl.load_workbook('grid1.xlsx')
+    sheet = wb.get_sheet_by_name('Sheet1')
+    data = main()
+    for col in range(len(data)):
+        sheet.cell(column=col+1,row=2).value=data[col]
+    wb.save('grid1.xlsx')
+toexcel()

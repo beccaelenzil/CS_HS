@@ -3,8 +3,8 @@ import time
 import pygame
 from gameoflife import *
 
-width = 90
-height = 90
+width = 50
+height = 50
 cell_size = 5
 spacing = 1
 
