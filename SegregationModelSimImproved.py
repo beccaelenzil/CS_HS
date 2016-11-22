@@ -5,13 +5,13 @@ from SegModelSimImpDislay import *
 
 width = 50
 height = 50
-cell_size = 5
+cell_size = 10
 spacing = 1
 Type1prob = .35
 Type2prob = .35
-TypeStoreprob = .16
-Threshhold = .5
-Storeradius = 5
+TypeStoreprob = .04
+Threshhold = .7
+Storeradius = 10
 Storethresh = (2*Storeradius)*(2*Storeradius-1.5)
 
 # Define some colors

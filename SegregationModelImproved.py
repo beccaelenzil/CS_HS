@@ -256,13 +256,13 @@ def main(radius):
                     d += 1
                     ave.append(segregationIndex(A))
                     if d == 10:
-                        data[thresh].append(sum(ave)/len(ave))
+                        data[thresh].append([float(5)*thresh/100,float(4)*storeprop/100,radius,sum(ave)/len(ave)])
                         e = 1
                         break
                 A = nextlifegenStat(A,float(5)*thresh/100,4,(2*radius)*(2*radius-1.5))
                 c += 1
             if e == 0:
-                data[thresh].append(segregationIndex(A[0]))
+                data[thresh].append([float(5)*thresh/100,float(4)*storeprop/100,radius,segregationIndex(A[0])])
     return data
 def toexcel():
     '''places grids formed in main function into excel spreadsheets. makes 5 sheets,
@@ -272,10 +272,14 @@ def toexcel():
         print i,'sheet'
         wb.save('grid.xlsx')
         data = main(i+1)
-        sheet = wb.get_sheet_by_name('Sheet'+str(i+1))
+        sheet = wb.get_sheet_by_name('Sheet1')
         for row in range(len(data)):
             for col in range(len(data[0])):
                 print [row,col]
-                sheet.cell(column=col+1,row=row+1).value=data[row][col]
+                r=i*len(data)*len(data[0])+row*len(data[0])+col+2
+                sheet.cell(column=1,row=r).value=data[row][col][0]
+                sheet.cell(column=2,row=r).value=data[row][col][1]
+                sheet.cell(column=3,row=r).value=data[row][col][2]
+                sheet.cell(column=4,row=r).value=data[row][col][3]
     wb.save('grid.xlsx')
 toexcel()
