@@ -20,26 +20,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SegregationModelSimImproved.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SegregationModelSimImproved.py">
+      <file leaf-file-name="log.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ScoringTheGame/log.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="20">
+              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SegregationModelImproved.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SegregationModelImproved.py">
+      <file leaf-file-name="Camel.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ScoringTheGame/Camel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,6 +83,8 @@
         <option value="$PROJECT_DIR$/SegModelNorm.py" />
         <option value="$PROJECT_DIR$/SegregationModelImproved.py" />
         <option value="$PROJECT_DIR$/SegregationModelSimImproved.py" />
+        <option value="$PROJECT_DIR$/ScoringTheGame/log.txt" />
+        <option value="$PROJECT_DIR$/ScoringTheGame/Camel.py" />
       </list>
     </option>
   </component>
@@ -121,6 +119,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -138,6 +137,10 @@
               <option name="myItemId" value="IntroCS_HS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScoringTheGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -148,14 +151,9 @@
               <option name="myItemId" value="IntroCS_HS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="old stuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,7 +166,7 @@
       <recent name="C:\Users\Hiro\Desktop\Storage\IntroCS_HS\old stuff" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.SegregationModelSimImproved">
+  <component name="RunManager" selected="Python.Camel">
     <configuration default="false" name="SegregationModelImproved" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -182,23 +180,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="IntroCS_HS" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SegregationModelImproved.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="gameoflifesimulation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IntroCS_HS" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gameoflifesimulation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -250,6 +231,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="IntroCS_HS" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SegregationModelSimImproved.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Camel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ScoringTheGame" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IntroCS_HS" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ScoringTheGame/Camel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -421,18 +419,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Function Fun" />
       <item index="1" class="java.lang.String" itemvalue="Python.SegregationModelImproved" />
-      <item index="2" class="java.lang.String" itemvalue="Python.gameoflifesimulation" />
-      <item index="3" class="java.lang.String" itemvalue="Python.SegModelNorm" />
-      <item index="4" class="java.lang.String" itemvalue="Python.SegregationModelSim" />
-      <item index="5" class="java.lang.String" itemvalue="Python.SegregationModelSimImproved" />
+      <item index="2" class="java.lang.String" itemvalue="Python.SegModelNorm" />
+      <item index="3" class="java.lang.String" itemvalue="Python.SegregationModelSim" />
+      <item index="4" class="java.lang.String" itemvalue="Python.SegregationModelSimImproved" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Camel" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.SegregationModelSimImproved" />
-        <item index="1" class="java.lang.String" itemvalue="Python.SegregationModelImproved" />
-        <item index="2" class="java.lang.String" itemvalue="Python.SegModelNorm" />
-        <item index="3" class="java.lang.String" itemvalue="Python.SegregationModelSim" />
-        <item index="4" class="java.lang.String" itemvalue="Python.gameoflifesimulation" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Camel" />
+        <item index="1" class="java.lang.String" itemvalue="Python.SegregationModelSimImproved" />
+        <item index="2" class="java.lang.String" itemvalue="Python.SegregationModelImproved" />
+        <item index="3" class="java.lang.String" itemvalue="Python.SegModelNorm" />
+        <item index="4" class="java.lang.String" itemvalue="Python.SegregationModelSim" />
       </list>
     </recent_temporary>
   </component>
@@ -443,10 +441,10 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23214285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22991072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32047477" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29498526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -503,8 +501,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Guessthenumber.py" />
-    <entry file="file://$PROJECT_DIR$/ps3Feedback_HS.txt" />
     <entry file="file://$PROJECT_DIR$/RecursiveDrawing.py" />
     <entry file="file://$PROJECT_DIR$/Mathclassproject.py" />
     <entry file="file://$PROJECT_DIR$/21.py" />
@@ -776,21 +772,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SegregationModelImproved.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="20">
           <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SegregationModelSimImproved.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="20">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScoringTheGame/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScoringTheGame/Camel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
