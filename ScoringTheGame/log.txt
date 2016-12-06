@@ -1,5 +1,13 @@
 Week 1 (11/30-12/2)
 Did C.4 quiz. Have idea for game
+
+Camel Game Feedback -->
+Make sure you use elif when appropriate
+
+Make sure after the first time done is possibly set to true,
+in subsequent conditional control structures, you check that done == False
+
+
 Week 2 (12/5-12/11)
 
 Week 3 (12/12 - 12/16)
