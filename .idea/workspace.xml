@@ -30,12 +30,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Camel.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Camel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScoringTheGame/Camel.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C5Lab.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ScoringTheGame/C5Lab.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C5Tutorial.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ScoringTheGame/C5Tutorial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,6 +109,8 @@
         <option value="$PROJECT_DIR$/SegregationModelSimImproved.py" />
         <option value="$PROJECT_DIR$/ScoringTheGame/log.txt" />
         <option value="$PROJECT_DIR$/ScoringTheGame/Camel.py" />
+        <option value="$PROJECT_DIR$/ScoringTheGame/C5Tutorial.py" />
+        <option value="$PROJECT_DIR$/ScoringTheGame/C5Lab.py" />
       </list>
     </option>
   </component>
@@ -166,7 +192,7 @@
       <recent name="C:\Users\Hiro\Desktop\Storage\IntroCS_HS\old stuff" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Camel">
+  <component name="RunManager" selected="Python.C5Lab">
     <configuration default="false" name="SegregationModelImproved" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -180,40 +206,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="IntroCS_HS" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SegregationModelImproved.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SegModelNorm" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IntroCS_HS" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SegModelNorm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SegregationModelSim" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IntroCS_HS" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SegregationModelSim.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -248,6 +240,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="IntroCS_HS" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ScoringTheGame/Camel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="C5Tutorial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ScoringTheGame" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IntroCS_HS" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ScoringTheGame/C5Tutorial.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="C5Lab" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ScoringTheGame" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IntroCS_HS" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ScoringTheGame/C5Lab.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -419,18 +445,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Function Fun" />
       <item index="1" class="java.lang.String" itemvalue="Python.SegregationModelImproved" />
-      <item index="2" class="java.lang.String" itemvalue="Python.SegModelNorm" />
-      <item index="3" class="java.lang.String" itemvalue="Python.SegregationModelSim" />
-      <item index="4" class="java.lang.String" itemvalue="Python.SegregationModelSimImproved" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Camel" />
+      <item index="2" class="java.lang.String" itemvalue="Python.SegregationModelSimImproved" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Camel" />
+      <item index="4" class="java.lang.String" itemvalue="Python.C5Tutorial" />
+      <item index="5" class="java.lang.String" itemvalue="Python.C5Lab" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Camel" />
-        <item index="1" class="java.lang.String" itemvalue="Python.SegregationModelSimImproved" />
-        <item index="2" class="java.lang.String" itemvalue="Python.SegregationModelImproved" />
-        <item index="3" class="java.lang.String" itemvalue="Python.SegModelNorm" />
-        <item index="4" class="java.lang.String" itemvalue="Python.SegregationModelSim" />
+        <item index="0" class="java.lang.String" itemvalue="Python.C5Lab" />
+        <item index="1" class="java.lang.String" itemvalue="Python.C5Tutorial" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Camel" />
+        <item index="3" class="java.lang.String" itemvalue="Python.SegregationModelSimImproved" />
+        <item index="4" class="java.lang.String" itemvalue="Python.SegregationModelImproved" />
       </list>
     </recent_temporary>
   </component>
@@ -496,13 +522,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RecursiveDrawing.py" />
-    <entry file="file://$PROJECT_DIR$/Mathclassproject.py" />
     <entry file="file://$PROJECT_DIR$/21.py" />
     <entry file="file://$PROJECT_DIR$/../../New folder/electionSim.py" />
     <entry file="file://$PROJECT_DIR$/New folder/electionSim.py" />
@@ -799,6 +823,26 @@
         <state relative-caret-position="240">
           <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScoringTheGame/C5Tutorial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScoringTheGame/C5Lab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
