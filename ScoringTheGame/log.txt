@@ -3,6 +3,7 @@ Did C.4 quiz. Have idea for game
 
 Camel Game Feedback -->
 Make sure you use elif when appropriate
+In addition, you need to check if done == False before you check for items like tiredness.
 
 Make sure after the first time done is possibly set to true,
 in subsequent conditional control structures, you check that done == False
@@ -11,6 +12,7 @@ in subsequent conditional control structures, you check that done == False
 Week 2 (12/5-12/11)
 Did Chapter 5 lesson and lab. Read Chapter 11(or 13, dont remember the number. was the images one).
 Haven't done the lab but content seems straightforward.
+
 Week 3 (12/12 - 12/16)
 
 Week 4 (1/3-1/8)
