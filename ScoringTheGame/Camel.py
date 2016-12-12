@@ -54,23 +54,27 @@ while done == False:
         print "The natives are",nativesdist,"miles behind you"
     if 6 >= thirst > 4:
         print "You are thirsty"
-    if thirst > 6:
+    elif thirst > 6:
         print "You died of thirst"
         done = True
+        break
     if 8 >= tire > 5:
         print "Your camel is tired"
-    if tire > 8:
+    elif tire > 8:
         print "Your camel died"
         done = True
+        break
     nativesdist = miles_travelled - natives_travel
     if 15 >= nativesdist > 0:
         print "The natives are getting close"
-    if nativesdist <= 0:
+    elif nativesdist <= 0:
         print "The natives caught up"
         done = True
-    if miles_travelled >= 200:
+        break
+    elif miles_travelled >= 200:
         print "You crossed the desert. You win"
         done = True
+        break
     if rand.randint(1,200) == 100:
         print "You found an oasis"
         thirst = 0
