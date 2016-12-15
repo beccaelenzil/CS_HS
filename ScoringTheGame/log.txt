@@ -14,7 +14,13 @@ Did Chapter 5 lesson and lab. Read Chapter 11(or 13, dont remember the number. w
 Haven't done the lab but content seems straightforward.
 
 Week 3 (12/12 - 12/16)
+Did chapter 8 animation lab. Game idea is fishing simulation where fisherman must manuever fish to
+catch it, but take care not to snap line. In animation lab, fish moves randomly around, and line grows
+thinner when fish is farther.
 
+Am working on calculations for fish and line dynamics so that fish can't swim away unresisted.
+
+Finished Chapter 10 lab and played with different ways of controlling speeds.
 Week 4 (1/3-1/8)
 
 Week 5 (1/9-1/15)

@@ -15,13 +15,18 @@ background_image = pygame.image.load("lake.jpg").convert()
 player_image = pygame.image.load("fish.png").convert()
 player_image.set_colorkey(BLACK)
 done = False
-
+count = 0
 while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
+    count += 1
+    if count == 50:
+        count = 0
+        player_image = pygame.transform.rotate(player_image,30)
+    mousepos = [pygame.mouse.get_pos()[0]-40,pygame.mouse.get_pos()[1]-40]
     screen.blit(background_image,background_position)
-    screen.blit(player_image,pygame.mouse.get_pos())
+    screen.blit(player_image,mousepos)
     pygame.display.flip()
     clock.tick(60)
 
