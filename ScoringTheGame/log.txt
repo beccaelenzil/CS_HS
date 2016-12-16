@@ -8,6 +8,8 @@ In addition, you need to check if done == False before you check for items like 
 Make sure after the first time done is possibly set to true,
 in subsequent conditional control structures, you check that done == False
 
+Camel Game Corrections made, Score: 5/5
+
 
 Week 2 (12/5-12/11)
 Did Chapter 5 lesson and lab. Read Chapter 11(or 13, dont remember the number. was the images one).
