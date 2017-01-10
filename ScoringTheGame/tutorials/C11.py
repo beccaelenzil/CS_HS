@@ -11,8 +11,8 @@ pygame.init()
 screen = pygame.display.set_mode([800, 600])
 clock = pygame.time.Clock()
 background_position = [0,0]
-background_image = pygame.image.load("lake.jpg").convert()
-player_image = pygame.image.load("fish.png").convert()
+background_image = pygame.image.load("graphics/lake.jpg").convert()
+player_image = pygame.image.load("graphics/fish.png").convert()
 player_image.set_colorkey(BLACK)
 done = False
 count = 0
