@@ -1,0 +1,67 @@
+My game will be a fishing simulator. The first scene will likely just show the fisherman
+walking to the lake. No interaction, just for the music. The second, and main scene, will
+involve the player, who stands on a dock in the top left, casting a lure into the lake. The
+underwater view of the lake will consume most of the screen. There will be a fish moving
+around randomly in the water until a sinking lure hits it, at which point it will latch on.
+While the fish is hooked, I hope to use real physics to simulate the stretch and breaking
+point of the fishing line, as the user reels or lets out line, and the fish continues to move
+in a new random direction every 3 seconds. Even though the premise of game is really boring,
+we will ironically use super hype-y music throughout. There are lots of sound effect opportunities,
+such as splashing, reeling, breaking line, flopping on dock. The goal of the game for the user is
+to reel the fish all the way in to the dock without the line breaking and the fish getting away.
+
+Verb list:
+will
+be
+show
+involve
+stands
+consume
+use
+simulate
+lets
+continues
+
+Noun list:
+game
+simulator
+
+
+scene
+    -opening
+    -main
+player
+    *fisherman
+    *user
+    -walking
+lure
+    -casting
+    -reels
+    -latch
+    *hooked
+    -sinking
+screen
+    -water
+    -dock
+    -lake
+fish
+    -direction
+    -seconds
+    -moving
+
+
+line
+    *physics
+    -stretch
+    -breaking point
+
+
+
+premise
+sound effect
+    *music
+    *opportunities
+    -flopping
+    -splashing
+goal
+    -completed
