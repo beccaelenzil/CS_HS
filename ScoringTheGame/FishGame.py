@@ -4,35 +4,282 @@ import math
 pygame.init()
 BLACK = [0,0,0]
 WHITE = [255,255,255]
+RED = [255,0,0]
+GREEN = [0,255,0]
 screen = pygame.display.set_mode([800,600])
 
-fish = pygame.image.load("graphics/fish.png").convert()
-background_image = pygame.image.load("graphics/lake.jpg").convert()
-fish.set_colorkey(BLACK)
+background_image1 = pygame.image.load("graphics/abovelake.jpg").convert()
+background_image2 = pygame.image.load("graphics/belowlake.jpg").convert()
+fishmansit = pygame.image.load("graphics/fishmansitting.png").convert()
+fishmancast1 = pygame.image.load("graphics/fishmancast1.png").convert()
+fishmancast2 = pygame.image.load("graphics/fishmancast2.png").convert()
+castboxborder = pygame.image.load("graphics/castboxborder.jpg").convert()
+fishmanfish = pygame.image.load("graphics/fishmanfish.png").convert()
+
+fishmansit.set_colorkey(WHITE)
+fishmancast1.set_colorkey(WHITE)
+fishmancast2.set_colorkey(WHITE)
+fishmanfish.set_colorkey(WHITE)
+
 clock = pygame.time.Clock()
 done = False
-fx = 400
-fy = 300
-count = 200
+
+class fishman:
+    def __init__(self,name):
+        self.name = name
+        self.posx = 40
+        self.posy = 100
+        self.mode = "sit"
+        self.action = "in"
+class lure(object):
+    def __init__(self):
+        self.posx = 0
+        self.posy = 0
+        self.movex = 0
+        self.omovey = -10
+        self.movey = -10
+        self.grav = 1
+        self.image = pygame.image.load("graphics/worm.png").convert()
+        self.image.set_colorkey(WHITE)
+        self.rect = pygame.Rect(self.posx,self.posy,self.image.get_rect()[0],self.image.get_rect()[1])
+class fish(object):
+    def __init__(self):
+        self.image = pygame.image.load("graphics/fish.png").convert()
+        self.image.set_colorkey(BLACK)
+        self.mode = "free"
+        self.movecounter = 0
+        self.posx = 400
+        self.posy = 400
+        self.force = 2
+        self.direct = math.pi/4
+        self.lineforce = 1
+        self.stretchfish = 0
+        self.stretchfactor = 0
+        self.OL = 0
+        self.CL = 0
+        self.rect = pygame.Rect(self.posx,self.posy,self.image.get_rect()[0],self.image.get_rect()[1])
+    def uncaughtmove(self):
+        self.posx += self.force*math.cos(self.direct)
+        self.posy += -1*self.force*math.sin(self.direct)
+        self.movecounter += 1
+    def move(self):
+        self.posx += math.cos(self.direct)*f.force*2
+        self.posy += -math.sin(self.direct)*f.force*2
+        a = math.atan(self.posy/self.posx)
+        b = 2*math.pi*self.direct
+        self.stretchfish = f.force*math.cos(b-a)
+        self.stretchfactor += (self.lineforce + self.stretchfish)/20
+        if self.stretchfactor < 10:
+            self.CL = self.OL + self.stretchfactor
+        elif self.stretchfactor < 15:
+            self.CL = self.OL + 9 + math.sqrt(self.stretchfactor-9)
+        dist = math.sqrt(self.posx**2+self.posy**2)
+        compress = self.CL/dist
+        self.posx = self.posx*compress
+        self.posy = self.posy*compress
+
+f = fish()
+f.mode = "free"
+f.movecounter = 0
+f.posx = 400
+f.posy = 400
+f.force = 2
+f.direct = math.pi/4
+f.lineforce = 1
+f.OL = math.sqrt(f.posx**2+f.posy**2)
+f.CL = f.OL
+f.rect = pygame.Rect(f.posx,f.posy,f.image.get_rect()[2],f.image.get_rect()[3])
+f.stretchfactor = 0
+
+player = fishman("player")
+player.posx = 110
+player.posy = 25
+player.mode = "sit"
+player.action = "none"
+
+castboxposx = 200
+castboxposy = 44
+
+gamestage = "sitting"
+gameon = 1
+
+castcounter = 1
+castcounterchange = 1
+
+castanimatecounter = 0
+worm = lure()
+worm.rect = pygame.Rect(worm.posx,worm.posy,worm.image.get_rect()[2],worm.image.get_rect()[3])
+
 
 while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                if gamestage == "sitting":
+                    gamestage = "castingselect"
+                elif gamestage == "castingselect":
+                    worm.movex = int(castcounter/5)
+                    worm.posx = player.posx
+                    worm.posy = player.posy
+                    gamestage = "casting"
+                    castanimatecounter = 0
+            elif event.key == pygame.K_DOWN:
+                if gamestage == "failed" or gamestage == "sink":
+                    gamestage = "reeling"
+                elif gamestage == "fight":
+                    player.action = "in"
+            elif event.key == pygame.K_UP:
+                if gamestage == "fight":
+                    player.action = "out"
+        elif event.type == pygame.KEYUP:
+            if gamestage == "fight":
+                if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
+                    player.action = "none"
+    f.rect.x = f.posx
+    f.rect.y = f.posy
+    worm.rect.x = worm.posx
+    worm.rect.y = worm.posy
+    if worm.rect.colliderect(f.rect):
+        if gamestage == "sink" or gamestage == "reeling" or gamestage == "failed":
+            f.OL = math.sqrt(f.posx**2+f.posy**2)
+            f.CL = f.OL
+            f.stretchfactor = 0
+            f.lineforce = 0
+            f.direct = random.random()*math.pi/2+3*math.pi/2
+            hookchoice = [1,5,25]
+            hooklevel = random.choice(hookchoice)
+            player.action = "none"
+            gamestage = "fight"
+    if f.mode == "free":
+        f.uncaughtmove()
+        if f.movecounter >= 100 or f.posx >= 720 or f.posx <= 120 or f.posy >= 520 or f.posy <= 120:
+            if f.posx >= 350 and f.posy <= 320:
+                f.direct = random.random()*math.pi/2+math.pi
+            elif f.posx < 350 and f.posy <= 320:
+                f.direct = random.random()*math.pi/2+3/2*math.pi
+            elif f.posx >= 350 and f.posy > 320:
+                f.direct = random.random()*math.pi/2+math.pi/2
+            elif f.posx < 350 and f.posy > 320:
+                f.direct = random.random()*math.pi/2
+            f.movecounter = 0
+    elif f.mode == "caught":
+        if player.action == "in":
+            f.OL += -1
+            f.lineforce = 1
+        elif player.action == "out":
+            f.OL += 1
+            f.lineforce = -2
+        elif player.action == "none":
+            if f.stretchfactor > 5:
+                f.lineforce = -.5
+            else:
+                f.lineforce = 0
+        f.move()
+        f.movecounter += 1
+        if f.movecounter >= 25:
+            f.direct += random.random()*math.pi/2-math.pi/4
+            f.movecounter = 0
+            if f.force > 0:
+                f.force += -.05
+        if f.posx >= 720 or f.posx <= 120 or f.posy >= 520 or f.posy <= 120:
+            if f.posx >= 350 and f.posy <= 320:
+                f.direct = random.random()*math.pi/2+math.pi
+            elif f.posx < 350 and f.posy <= 320:
+                f.direct = random.random()*math.pi/2+3/2*math.pi
+            elif f.posx >= 350 and f.posy > 320:
+                f.direct = random.random()*math.pi/2+math.pi/2
+            elif f.posx < 350 and f.posy > 320:
+                f.direct = random.random()*math.pi/2
+            movecounter = 0
+            print [f.posx,f.posy,f.direct]
+        if f.CL - f.OL > 14:
+            gamestage = "snap"
+            print gamestage
+            done = True
+        if f.CL - f.OL < -3:
+            if random.randint(0,1000) <=  hooklevel:
+                gamestage = "shake"
+                print gamestage
+                done = True
+        if f.CL - f.OL < -7:
+            if random.randint(0,500) <= hooklevel:
+                gamestage = "shake"
+                print gamestage
+                done = True
+        if f.CL <= 100:
+            gamestage = "catch"
+            print gamestage
+            done = True
+        print [f.OL,f.CL,f.stretchfactor,f.lineforce,f.force,f.direct,f.stretchfish]
+    if gameon == 1:
+        screen.blit(background_image1,[0,0])
+        screen.blit(background_image2,[0,100])
+        screen.blit(f.image,[f.posx,f.posy])
+        if player.mode == "sit":
+            screen.blit(fishmansit,[player.posx,player.posy])
+        elif player.mode == "cast1":
+            screen.blit(fishmancast1,[player.posx,player.posy])
+        elif player.mode == "cast2":
+            screen.blit(fishmancast2,[player.posx,player.posy])
+        elif player.mode == "fishing":
+            screen.blit(fishmanfish,[player.posx,player.posy])
+    if gamestage == "sitting":
+        player.mode = "sit"
+        castcounter = 1
+        castcounterchange = 1
+        worm.movey = worm.omovey
+    elif gamestage == "castingselect":
+        castcounter += castcounterchange
+        if castcounter > 100 or castcounter < 1:
+            castcounterchange = castcounterchange * -1
+        screen.blit(castboxborder,[castboxposx,castboxposy])
+        pygame.draw.rect(screen,WHITE,[castboxposx+10,castboxposy+10,castcounter,20])
 
-    linethick = int((1000-math.sqrt(fx**2+fy**2))/100)
-    count += 1
-    if fx >= 759 or fy >= 559 or fx <= 1 or fy <= 1:
-        direct = random.randint(0,359)
-    if count >= 200:
-        count = 0
-        direct = random.randint(0,359)
-    fx += math.cos(direct)
-    fy += math.sin(direct)
-    screen.blit(background_image,[0,0])
-    pygame.draw.circle(screen,WHITE,[0,0],20)
-    pygame.draw.line(screen,WHITE,[0,0],[fx,fy],linethick)
-    screen.blit(fish,[fx-40,fy-40])
+    elif gamestage == "casting":
+        castanimatecounter += 1
+        if castanimatecounter < 20:
+            player.mode = "cast1"
+        else:
+            player.mode = "cast2"
+            worm.posx += worm.movex
+            worm.posy += worm.movey
+            worm.movey += worm.grav
+            screen.blit(worm.image,[worm.posx,worm.posy])
+            pygame.draw.line(screen,WHITE,[player.posx+60,player.posy+10],[worm.posx+10,worm.posy+20])
+            if worm.posy >= 100:
+                gamestage = "sink"
+    elif gamestage == "sink":
+        player.mode = "fishing"
+        worm.posy += worm.movey/6
+        screen.blit(worm.image,[worm.posx,worm.posy])
+        pygame.draw.line(screen,WHITE,[player.posx+60,player.posy+23],[worm.posx+10,worm.posy+20])
+        if worm.posy > 560:
+            gamestage = "failed"
+    elif gamestage == "failed":
+        screen.blit(worm.image,[worm.posx,worm.posy])
+        pygame.draw.line(screen,WHITE,[player.posx+60,player.posy+23],[worm.posx+10,worm.posy+20])
+    elif gamestage == "reeling":
+        wormxdist = worm.posx - player.posx
+        wormydist = worm.posy - player.posy
+        wormdist = math.sqrt(wormxdist**2+wormydist**2)
+        worm.posx += -int(5*wormxdist/wormdist)
+        worm.posy += -int(5*wormydist/wormdist)
+        screen.blit(worm.image,[worm.posx,worm.posy])
+        pygame.draw.line(screen,WHITE,[player.posx+60,player.posy+23],[worm.posx+10,worm.posy+20])
+        if worm.posy <= 90 and worm.posx <= 150:
+            gamestage = "sitting"
+    elif gamestage == "fight":
+        f.mode = "caught"
+        pygame.draw.line(screen,WHITE,[player.posx+60,player.posy+23],[f.posx+20,f.posy+30])
+        screen.blit(castboxborder,[castboxposx,castboxposy])
+        if f.CL > f.OL:
+            pygame.draw.rect(screen,RED,[castboxposx+10+50,castboxposy+10,int((f.CL-f.OL)*50/14),20])
+        elif f.CL < f.OL:
+            pygame.draw.rect(screen,GREEN,[castboxposx+10+50,castboxposy+10,int((f.CL-f.OL)*50/14),20])
+        pygame.draw.rect(screen,BLACK,[f.posx,f.posy,50,15])
+        pygame.draw.rect(screen,RED,[f.posx+5,f.posy+5,f.force/2*40,5])
     pygame.display.flip()
     clock.tick(60)
 pygame.quit()
