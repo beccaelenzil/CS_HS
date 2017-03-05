@@ -23,18 +23,46 @@
       <file leaf-file-name="FishGame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ScoringTheGame/FishGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+            <state relative-caret-position="116">
+              <caret line="335" column="33" selection-start-line="335" selection-start-column="33" selection-end-line="335" selection-end-column="33" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#5812#5850#0" expanded="false" />
-                <element signature="e#5900#5938#0" expanded="false" />
-                <element signature="e#5989#6096#0" expanded="false" />
-                <element signature="e#8161#8267#0" expanded="false" />
-                <element signature="e#8641#9119#0" expanded="false" />
-                <element signature="e#9158#9429#0" expanded="false" />
-                <element signature="e#9470#9614#0" expanded="false" />
-                <element signature="e#9656#10123#0" expanded="false" />
+                <element signature="e#1858#2239#0" expanded="false" />
+                <element signature="e#2264#3905#0" expanded="false" />
+                <element signature="e#4307#9556#0" expanded="false" />
+                <element signature="e#4453#4657#0" expanded="false" />
+                <element signature="e#4720#6377#0" expanded="false" />
+                <element signature="e#6448#7830#0" expanded="false" />
+                <element signature="e#7897#9556#0" expanded="false" />
+                <element signature="e#9618#10298#0" expanded="false" />
+                <element signature="e#9687#9749#0" expanded="false" />
+                <element signature="e#9933#10072#0" expanded="false" />
+                <element signature="e#10139#10298#0" expanded="false" />
+                <element signature="e#10358#10887#0" expanded="false" />
+                <element signature="e#10403#10461#0" expanded="false" />
+                <element signature="e#10522#10661#0" expanded="false" />
+                <element signature="e#10728#10887#0" expanded="false" />
+                <element signature="e#10941#11125#0" expanded="false" />
+                <element signature="e#10982#11125#0" expanded="false" />
+                <element signature="e#11493#12076#0" expanded="false" />
+                <element signature="e#12118#12829#0" expanded="false" />
+                <element signature="e#12901#14741#0" expanded="false" />
+                <element signature="e#12943#12985#0" expanded="false" />
+                <element signature="e#13043#13085#0" expanded="false" />
+                <element signature="e#13144#13263#0" expanded="false" />
+                <element signature="e#15985#16354#0" expanded="false" />
+                <element signature="e#16396#16502#0" expanded="false" />
+                <element signature="e#16550#16833#0" expanded="false" />
+                <element signature="e#16875#17599#0" expanded="false" />
+                <element signature="e#17638#17909#0" expanded="false" />
+                <element signature="e#17950#18094#0" expanded="false" />
+                <element signature="e#18136#18706#0" expanded="false" />
+                <element signature="e#18582#18706#0" expanded="false" />
+                <element signature="e#18746#19311#0" expanded="false" />
+                <element signature="e#19354#19412#0" expanded="false" />
+                <element signature="e#19450#20389#0" expanded="false" />
+                <element signature="e#20432#21263#0" expanded="false" />
+                <element signature="e#20918#21071#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -43,40 +71,8 @@
       <file leaf-file-name="testing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScoringTheGame/testing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="C5Lab.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ScoringTheGame/tutorials/C5Lab.py">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="C10Lab.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ScoringTheGame/tutorials/C10Lab.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ScoringTheGame/log.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+              <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -133,7 +129,9 @@
         <option value="$PROJECT_DIR$/ScoringTheGame/C11.py" />
         <option value="$PROJECT_DIR$/ScoringTheGame/tutorials/myGameDesign" />
         <option value="$PROJECT_DIR$/ScoringTheGame/log.txt" />
+        <option value="$PROJECT_DIR$/ScoringTheGame/tutorials/C10Lab.py" />
         <option value="$PROJECT_DIR$/ScoringTheGame/testing.py" />
+        <option value="$PROJECT_DIR$/ScoringTheGame/highscore" />
         <option value="$PROJECT_DIR$/ScoringTheGame/FishGame.py" />
       </list>
     </option>
@@ -206,29 +204,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tutorials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntroCS_HS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntroCS_HS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScoringTheGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tutorials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graphics" />
+              <option name="myItemId" value="sounds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,11 +224,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hiros\Desktop\pycharm\IntroCS_HS\ScoringTheGame\sounds" />
+      <recent name="C:\Users\hiros\Desktop\pycharm\IntroCS_HS\ScoringTheGame" />
       <recent name="C:\Users\hiros\Desktop\pycharm\IntroCS_HS\ScoringTheGame\tutorials" />
       <recent name="C:\Users\hiros\Desktop\pycharm\IntroCS_HS\ScoringTheGame\graphics" />
       <recent name="C:\Users\Hiro\Desktop\Storage\IntroCS_HS\old stuff" />
@@ -520,8 +498,8 @@
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.FishGame" />
         <item index="1" class="java.lang.String" itemvalue="Python.testing" />
-        <item index="2" class="java.lang.String" itemvalue="Python.C5Lab" />
-        <item index="3" class="java.lang.String" itemvalue="Python.C10Lab" />
+        <item index="2" class="java.lang.String" itemvalue="Python.C10Lab" />
+        <item index="3" class="java.lang.String" itemvalue="Python.C5Lab" />
         <item index="4" class="java.lang.String" itemvalue="Python.C11 (1)" />
       </list>
     </recent_temporary>
@@ -533,10 +511,10 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21354167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21130952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.320059" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21533923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -588,12 +566,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pygame-1.9.1.win32-py2.7 (1).msi" />
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/old stuff/electionforecasting.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -835,31 +812,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScoringTheGame/FishGame.py">
+    <entry file="file://$PROJECT_DIR$/ScoringTheGame/log.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#5812#5850#0" expanded="false" />
-            <element signature="e#5900#5938#0" expanded="false" />
-            <element signature="e#5989#6096#0" expanded="false" />
-            <element signature="e#8161#8267#0" expanded="false" />
-            <element signature="e#8641#9119#0" expanded="false" />
-            <element signature="e#9158#9429#0" expanded="false" />
-            <element signature="e#9470#9614#0" expanded="false" />
-            <element signature="e#9656#10123#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ScoringTheGame/testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="620">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,23 +824,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ScoringTheGame/tutorials/C10Lab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="80">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScoringTheGame/log.txt">
+    <entry file="file://$PROJECT_DIR$/ScoringTheGame/testing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScoringTheGame/highscore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScoringTheGame/FishGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="335" column="33" selection-start-line="335" selection-start-column="33" selection-end-line="335" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#1858#2239#0" expanded="false" />
+            <element signature="e#2264#3905#0" expanded="false" />
+            <element signature="e#4307#9556#0" expanded="false" />
+            <element signature="e#4453#4657#0" expanded="false" />
+            <element signature="e#4720#6377#0" expanded="false" />
+            <element signature="e#6448#7830#0" expanded="false" />
+            <element signature="e#7897#9556#0" expanded="false" />
+            <element signature="e#9618#10298#0" expanded="false" />
+            <element signature="e#9687#9749#0" expanded="false" />
+            <element signature="e#9933#10072#0" expanded="false" />
+            <element signature="e#10139#10298#0" expanded="false" />
+            <element signature="e#10358#10887#0" expanded="false" />
+            <element signature="e#10403#10461#0" expanded="false" />
+            <element signature="e#10522#10661#0" expanded="false" />
+            <element signature="e#10728#10887#0" expanded="false" />
+            <element signature="e#10941#11125#0" expanded="false" />
+            <element signature="e#10982#11125#0" expanded="false" />
+            <element signature="e#11493#12076#0" expanded="false" />
+            <element signature="e#12118#12829#0" expanded="false" />
+            <element signature="e#12901#14741#0" expanded="false" />
+            <element signature="e#12943#12985#0" expanded="false" />
+            <element signature="e#13043#13085#0" expanded="false" />
+            <element signature="e#13144#13263#0" expanded="false" />
+            <element signature="e#15985#16354#0" expanded="false" />
+            <element signature="e#16396#16502#0" expanded="false" />
+            <element signature="e#16550#16833#0" expanded="false" />
+            <element signature="e#16875#17599#0" expanded="false" />
+            <element signature="e#17638#17909#0" expanded="false" />
+            <element signature="e#17950#18094#0" expanded="false" />
+            <element signature="e#18136#18706#0" expanded="false" />
+            <element signature="e#18582#18706#0" expanded="false" />
+            <element signature="e#18746#19311#0" expanded="false" />
+            <element signature="e#19354#19412#0" expanded="false" />
+            <element signature="e#19450#20389#0" expanded="false" />
+            <element signature="e#20432#21263#0" expanded="false" />
+            <element signature="e#20918#21071#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
