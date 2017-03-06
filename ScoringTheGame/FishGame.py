@@ -16,7 +16,8 @@ font = pygame.font.SysFont("Calibri",25)
 menutext = font.render("Menu",1,WHITE)
 instructionstext = font.render("Instructions",1,WHITE)
 playagaintext = font.render("Play Again",1,WHITE)
-
+resethstext = font.render("Reset Highscore",1,WHITE)
+playtext = font.render("Play",1,WHITE)
 tf = "highscore.txt"
 
 #images
@@ -28,12 +29,12 @@ fishmancast2 = pygame.image.load("graphics/fishmancast2.png").convert()
 castboxborder = pygame.image.load("graphics/castboxborder.jpg").convert()
 fishmanfish = pygame.image.load("graphics/fishmanfish.png").convert()
 menubackground = pygame.image.load("graphics/menu.png").convert()
+menubackground1 = pygame.image.load("graphics/menu1.png").convert()
 
 fishmansit.set_colorkey(WHITE)
 fishmancast1.set_colorkey(WHITE)
 fishmancast2.set_colorkey(WHITE)
 fishmanfish.set_colorkey(WHITE)
-
 #sounds
 themeair = pygame.mixer.Sound("sounds/themeair.ogg")
 themewater = pygame.mixer.Sound("sounds/themewater.ogg")
@@ -85,7 +86,7 @@ class fish(object):
         self.OL = 0
         self.CL = 0
         self.rect = pygame.Rect(self.posx,self.posy,self.image.get_rect()[0],self.image.get_rect()[1])
-        self.posxo = 0
+        self.posx0 = 0
         self.posx0 = 0
     def uncaughtmove(self):
         #movement while not hooked
@@ -116,7 +117,7 @@ class fish(object):
 gamestage = "menu"
 gameon = 0
 menuselect = 0
-
+instructionselect = 0
 
 #play both musics so can switch between when go underwater
 themeair.play(loops=-1)
@@ -257,6 +258,14 @@ while not done:
                         gameon = 1
                         water.play(-1)
                         start_ticks = pygame.time.get_ticks()
+                elif gamestage == "instructions":
+                    if instructionselect == 0:
+                        gamestage = "menu"
+                    elif instructionselect == 1:
+                        hschange = open(tf,'w+')
+                        hschange.write('0')
+                        hschange.close()
+                        gamestage = "menu"
             elif event.key == pygame.K_DOWN:
                 if gamestage == "failed" or gamestage == "sink":
                     gamestage = "reeling"
@@ -274,6 +283,11 @@ while not done:
                         playagainselect = 1
                     elif playagainselect == 1:
                         playagainselect = 0
+                elif gamestage == "instructions":
+                    if instructionselect == 0:
+                        instructionselect = 1
+                    elif instructionselect == 1:
+                        instructionselect = 0
             elif event.key == pygame.K_UP:
                 if gamestage == "fight":
                     player.action = "out"
@@ -288,6 +302,11 @@ while not done:
                         playagainselect = 1
                     elif playagainselect == 1:
                         playagainselect = 0
+                elif gamestage == "instructions":
+                    if instructionselect == 0:
+                        instructionselect = 1
+                    elif instructionselect == 1:
+                        instructionselect = 0
         elif event.type == pygame.KEYUP:
             if gamestage == "fight":
                 if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
@@ -297,7 +316,10 @@ while not done:
 
     #what to do when not in game portion
     if gameon == 0:
-        screen.blit(menubackground,[0,0])
+        if gamestage == "menu":
+            screen.blit(menubackground,[0,0])
+        else:
+            screen.blit(menubackground1,[0,0])
 
     #what to do when in game portion
     elif gameon == 1:
@@ -396,9 +418,9 @@ while not done:
 
         #rendering and blitting score and timer
         seconds = (pygame.time.get_ticks()-start_ticks)/1000
-        timedisp = font.render("Score:"+str(score)+"   Time:"+str(50-seconds),1,BLACK)
+        timedisp = font.render("Count:"+str(score)+"   Time:"+str(seconds),1,BLACK)
         screen.blit(timedisp,[550,20])
-        if seconds == 50:
+        if score == 3:
             gameon = 0
             gamestage = "finished"
             themeair.set_volume(1)
@@ -413,13 +435,13 @@ while not done:
     #defining actions for various gamestages
     if gamestage == "menu":
         if menuselect == 0:
-            pygame.draw.rect(screen,WHITE,[290,190,220,70])
+            pygame.draw.rect(screen,WHITE,[290,290,220,70])
         elif menuselect == 1:
-            pygame.draw.rect(screen,WHITE,[290,340,220,70])
-        pygame.draw.rect(screen,BLACK,[300,200,200,50])
-        pygame.draw.rect(screen,BLACK,[300,350,200,50])
-        screen.blit(menutext,[370,215])
-        screen.blit(instructionstext,[340,365])
+            pygame.draw.rect(screen,WHITE,[290,440,220,70])
+        pygame.draw.rect(screen,BLACK,[300,300,200,50])
+        pygame.draw.rect(screen,BLACK,[300,450,200,50])
+        screen.blit(playtext,[370,315])
+        screen.blit(instructionstext,[340,465])
     elif gamestage == "sitting":
         player.mode = "sit"
         castcounter = 1
@@ -525,7 +547,7 @@ while not done:
         themeair.set_volume(1)
         themewater.set_volume(0)
     elif gamestage == "finished":
-        endtext = font.render("Yourscore:"+str(score),1,BLACK)
+        endtext = font.render("Yourscore:"+str(seconds),1,BLACK)
         if playagainselect == 0:
             pygame.draw.rect(screen,WHITE,[290,290,220,70])
         elif playagainselect == 1:
@@ -534,16 +556,24 @@ while not done:
         pygame.draw.rect(screen,BLACK,[300,450,200,50])
         screen.blit(menutext,[370,315])
         screen.blit(playagaintext,[350,462])
-        if currhighscore < score:
+        if currhighscore > seconds or currhighscore == 0:
             hightext = font.render("NEW HIGHSCORE!",1,BLACK)
             hschange = open(tf,'w+')
-            hschange.write(str(score))
+            hschange.write(str(seconds))
             hschange.close()
-        elif currhighscore >= score:
+        elif currhighscore <= seconds:
             hightext = font.render("Highscore:"+str(currhighscore),1,BLACK)
         screen.blit(hightext,[290,100])
         screen.blit(endtext,[290,130])
+    elif gamestage == "instructions":
+        if instructionselect == 0:
+            pygame.draw.rect(screen,WHITE,[290,390,220,70])
+        elif instructionselect == 1:
+            pygame.draw.rect(screen,WHITE,[290,520,220,70])
+        pygame.draw.rect(screen,BLACK,[300,400,200,50])
+        pygame.draw.rect(screen,BLACK,[300,530,200,50])
+        screen.blit(menutext,[370,415])
+        screen.blit(resethstext,[320,542])
     pygame.display.flip()
     clock.tick(60)
-
 pygame.quit()
